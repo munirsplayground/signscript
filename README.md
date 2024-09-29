@@ -4,8 +4,6 @@ Script for creating a signing build environment
 ## Disclaimer
 This script only works for password-less keys (DO NOT SET A PASSWORD) *This is due to building inline, other steps are necessary for a password*
 
-*Works with crDroid 8.x+ or lineage19.1+*
-
 ## How to run
 1. Download the script in your root build directory and run it
 
@@ -22,6 +20,6 @@ This script only works for password-less keys (DO NOT SET A PASSWORD) *This is d
 ### Prep device tree (for other ROMs)
 In your device tree (or common device tree) add:
 
-`-include vendor/lineage-priv/keys/keys.mk`
+`-include vendor/calyx-priv/keys/keys.mk`
 
 Build as usual!
