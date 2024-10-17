@@ -37,10 +37,10 @@ done
 
 
 ## Create vendor for keys
-mkdir -p vendor/calyx-priv
-mv ~/.android-certs vendor/calyx-priv/keys
-echo "PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/calyx-priv/keys/releasekey" > vendor/calyx-priv/keys/keys.mk
-cat <<EOF > vendor/calyx-priv/keys/BUILD.bazel
+mkdir -p vendor/yaap-priv
+mv ~/.android-certs vendor/yaap-priv/keys
+echo "PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/yaap-priv/keys/releasekey" > vendor/yaap-priv/keys/keys.mk
+cat <<EOF > vendor/yaap-priv/keys/BUILD.bazel
 filegroup(
     name = "android_certificate_directory",
     srcs = glob([
@@ -51,6 +51,6 @@ filegroup(
 )
 EOF
 
-echo "Done! Now build as usual. If builds aren't being signed, add '-include vendor/calyx-priv/keys/keys.mk' to your device mk file"
-echo "Make copies of your vendor/calyx-priv folder as it contains your keys!"
+echo "Done! Now build as usual. If builds aren't being signed, add '-include vendor/yaap-priv/keys/keys.mk' to your device mk file"
+echo "Make copies of your vendor/yaap-priv folder as it contains your keys!"
 sleep 3
